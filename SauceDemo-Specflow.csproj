@@ -120,7 +120,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DriverProvider\DriverSetup.cs" />
+    <Compile Include="Pages\CartPage.cs" />
+    <Compile Include="Pages\CheckOutCompletePage.cs" />
+    <Compile Include="Pages\CheckOutStepOnePage.cs" />
+    <Compile Include="Pages\CheckOutStepTwoPage.cs" />
     <Compile Include="Pages\InventoryPage.cs" />
+    <Compile Include="Steps\AddTwoProductsSteps.cs" />
     <Compile Include="Steps\BaseSteps.cs" />
     <Compile Include="UserActions\Actions.cs" />
     <Compile Include="UserActions\JavaScriptActions.cs" />

@@ -11,6 +11,7 @@ namespace SauceDemo_Specflow.Pages
     {
         private IWebDriver driver;
         private string baseUrl;
+        private static string product=null;
 
         public InventoryPage(IWebDriver currentDriver)
         {
@@ -27,6 +28,18 @@ namespace SauceDemo_Specflow.Pages
         private readonly By productLabelBy = By.ClassName("product_label");
         public IWebElement ProductLabel => driver.FindElement(productLabelBy);
 
+        private readonly By shoppingCartLink = By.Id("shopping_cart_container");
+        public IWebElement ShoppingCart => driver.FindElement(shoppingCartLink);
+
+        private By GetAddToCartButtonBy(string item)
+        {
+            return By.XPath("//*[@class='inventory_item']//*[@class='inventory_item_name' and text()='" + item + "']/../../..//button");
+        }
+
+        public void ClickAddToCartButton(string item)
+        {            
+            Actions.ClickOn(driver, driver.FindElement(GetAddToCartButtonBy(item)));   
+        }
 
         public void GoToPage()
         {
@@ -48,5 +61,9 @@ namespace SauceDemo_Specflow.Pages
             return Actions.VerifyElementDisplayed(driver, productLabelBy);
         }
 
+        public void ClickShoppingCart()
+        {
+            Actions.ClickOn(driver, ShoppingCart);
+        }
     }
 }

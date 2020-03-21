@@ -1,11 +1,18 @@
 ﻿Feature: BuyTwoProducts
-	In order to avoid silly mistakes
-	As a math idiot
-	I want to be told the sum of two numbers
+	In order to understand the process of buying products
+	As a performance_glitch_user
+	I want to buy two products
 
 @mytag
-Scenario: Add two numbers
-	Given I have entered 50 into the calculator
-	And I have entered 70 into the calculator
-	When I press add
-	Then the result should be 120 on the screen
+Scenario: test to buy two products
+	Given I am logged in as a performance_glitch_user
+	When I press add to cart button for two products
+	And I select shopping cart link
+	Then The Cart page is opened
+	When I click checkout button
+	And I fill the information Form
+	And I click continue Button
+	And I click Finish Button
+	Then Sucessfull message is displayed
+
+
