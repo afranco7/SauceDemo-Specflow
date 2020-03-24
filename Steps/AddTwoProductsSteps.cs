@@ -57,6 +57,12 @@ namespace SauceDemo_Specflow.Steps
         {
             string expectedUrl = "https://www.saucedemo.com/cart.html";
             Assert.AreEqual(expectedUrl, DriverSetup.Driver.Url);
+
+            string expectedLabel1Text = "Sauce Labs Onesie";
+            string expectedLabel2Text = "Sauce Labs Bike Light";
+
+            Assert.AreEqual(expectedLabel1Text, cartPage.GetLabel1Text(), "Item label does not correspond to the selected one");
+            Assert.AreEqual(expectedLabel2Text, cartPage.GetLabel2Text(), "Item label does not correspond to the selected one");
         }
 
         [When(@"I click checkout button")]

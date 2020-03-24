@@ -125,6 +125,7 @@
     <Compile Include="Pages\CheckOutStepOnePage.cs" />
     <Compile Include="Pages\CheckOutStepTwoPage.cs" />
     <Compile Include="Pages\InventoryPage.cs" />
+    <Compile Include="Steps\AddAndRemoveItemsFromCartSteps.cs" />
     <Compile Include="Steps\AddTwoProductsSteps.cs" />
     <Compile Include="Steps\BaseSteps.cs" />
     <Compile Include="UserActions\Actions.cs" />
@@ -134,6 +135,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Features\AddAndRemoveItemsFromCart.feature" />
     <None Include="Features\BuyTwoProducts.feature" />
     <None Include="Features\LoginAndLogout.feature" />
     <None Include="packages.config" />

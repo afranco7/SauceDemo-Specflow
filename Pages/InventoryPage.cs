@@ -29,11 +29,16 @@ namespace SauceDemo_Specflow.Pages
         public IWebElement ProductLabel => driver.FindElement(productLabelBy);
 
         private readonly By shoppingCartLink = By.Id("shopping_cart_container");
-        public IWebElement ShoppingCart => driver.FindElement(shoppingCartLink);
+        public IWebElement ShoppingCart => driver.FindElement(shoppingCartLink);            
 
         private By GetAddToCartButtonBy(string item)
         {
             return By.XPath("//*[@class='inventory_item']//*[@class='inventory_item_name' and text()='" + item + "']/../../..//button");
+        }
+
+        public string CartButtonText(string item)
+        {
+            return driver.FindElement(GetAddToCartButtonBy(item)).Text;
         }
 
         public void ClickAddToCartButton(string item)
