@@ -6,7 +6,7 @@
 @mytag
 Scenario: test to buy two products
 	Given I am logged in as a performance_glitch_user
-	When I press add to cart button for two products
+	When I press addtocart button for two products
 	And I select shopping cart link
 	Then The Cart page is opened
 	When I click checkout button

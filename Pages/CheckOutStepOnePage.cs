@@ -30,6 +30,15 @@ namespace SauceDemo_Specflow.Pages
         private readonly By continueButtonBy = By.XPath("//input[@class='btn_primary cart_button']");
         public IWebElement ContinueButton => driver.FindElement(continueButtonBy);
 
+        private readonly By errorMessageBy = By.XPath("//h3[@data-test='error']");
+        public IWebElement errorMessage => driver.FindElement(errorMessageBy);
+
+
+        public string GetErrorMessage()
+        {
+            return errorMessage.Text;
+        }
+
         public void GoToPage()
         {
             Actions.GoToPage(driver, baseUrl);

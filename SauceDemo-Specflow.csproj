@@ -128,6 +128,7 @@
     <Compile Include="Steps\AddAndRemoveItemsFromCartSteps.cs" />
     <Compile Include="Steps\AddTwoProductsSteps.cs" />
     <Compile Include="Steps\BaseSteps.cs" />
+    <Compile Include="Steps\FieldsValidationSteps.cs" />
     <Compile Include="UserActions\Actions.cs" />
     <Compile Include="UserActions\JavaScriptActions.cs" />
     <Compile Include="Pages\LoginPage.cs" />
@@ -137,6 +138,7 @@
   <ItemGroup>
     <None Include="Features\AddAndRemoveItemsFromCart.feature" />
     <None Include="Features\BuyTwoProducts.feature" />
+    <None Include="Features\FieldsValidation.feature" />
     <None Include="Features\LoginAndLogout.feature" />
     <None Include="packages.config" />
   </ItemGroup>

@@ -39,12 +39,12 @@ namespace SauceDemo_Specflow.Steps
             loginPage.ClickLoginButton();
         }
 
-        [When(@"I press add to cart button for two products")]
-        public void WhenIPressAddToCartButtonFor()
+        [When(@"I press addtocart button for two products")]
+        public void WhenIPressAddtocartButtonForTwoProducts()
         {
             inventoryPage.ClickAddToCartButton("Sauce Labs Onesie");
             inventoryPage.ClickAddToCartButton("Sauce Labs Bike Light");
-        }
+        }        
 
         [When(@"I select shopping cart link")]
         public void WhenISelectShoppingCartLink()
